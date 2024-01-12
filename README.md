@@ -19,7 +19,9 @@ The frequency fluctuations of intermediate designated oscillators should cancel 
 The data exchange is based on the publication of a comparator output for each pair of adjacent oscillators.
 The comparator output $\Delta_{A\rightarrow B}$ resulting from the comparison of oscillators A and B is defined as a scaled
 measured transfer beat:
-$$\Delta_{A\rightarrow B} = \frac{\hat{f}^T_{A\rightarrow B}}{s_B} = \frac{\hat{\nu}_B - \rho^0_{B,A}\hat{\nu}_A}{s_B},$$
+
+$$\Delta_{A\rightarrow B} = \frac{\hat{f}^T_{A\rightarrow B}}{s_B}  = \frac{\hat{\nu}_B -\rho^0 _{B,A} }{s_B}$$
+
 where the nominal frequency ratio $\rho^0_{B,A}$ and the scaling factor $s_B$ are numerical constants, freely and independently chosen by the operator of each comparator. The frequency reference against which the transfer beat is measured is also freely chosen by the operator.
 
 ### Definition of the exchange format
@@ -55,17 +57,17 @@ The data format is defined by the following set of requirements:
 
 2. The comparator output $\Delta_{A\rightarrow B}$ is stored in data file or files located in a folder called `INSTITUTEB_OSCB-INSTITUTEA_OSCA`. Any file name is acceptable, provided the lexicographic order of the filename matches the chronological order of the data. The data files contain:
 
-	- An optional header, whose lines must start with `#`. The content of the header is chosen by the person who produces 	that data, and is purely informative, i.e. not necessary to process the data.
+	- An optional header, whose lines must start with `#`. The content of the header is chosen by the person who produces 	that data, and is purely informative, i.e. not necessary to process the data.
 
-	- Column 1: date and time in Modified Julian Date (MJD)
+	- Column 1: date and time in Modified Julian Date (MJD)
 
-	- Column 2: comparator output $\Delta_{A\rightarrow B}$
+	- Column 2: comparator output $\Delta_{A\rightarrow B}$
 
-	- Column 3: validity flag (0 = invalid, 1 = valid but experimental, 2 = valid)
+	- Column 3: validity flag (0 = invalid, 1 = valid but experimental, 2 = valid)
 	
-	- Column 4: time-varying systematic uncertainty (optional, for accurate clocks only)
+	- Column 4: time-varying systematic uncertainty (optional, for accurate clocks only)
 
-	- Column >4: custom information. Not used in automatic data analysis scripts.
+	- Column >4: custom information. Not used in automatic data analysis scripts.
 	
 	
 
@@ -87,7 +89,7 @@ choosing appropriate NFRs, scaling factor, and reference oscillators.
 | $m_B/m_A$                     | -1              | local RF  | $\frac{m_B}{m_A}\hat \nu_A - \hat \nu_B$  | Transfer beat with opposite sign (A = clock; B = DO)                                  |
 | $\hat{\nu}^0_B/\hat{\nu}^0_A$ | +1              | local RF  | $\hat \nu_B - \hat{\nu}^0_B$              | Frequency of B, referenced to A (e.g., A is a maser or optical clock)                 |
 | $\hat{\nu}^0_B/\hat{\nu}^0_A$ | $\hat{\nu}^0_B$ | A         | $\tilde{\rho}_{B,A}$                      | Frequency of B, referenced to A (e.g., A is a maser or optical clock), relative units |
-| $\hat{\nu}^0_B/\hat{\nu}^0_A$ | $\hat{\nu}^0_B$ | local RF  | $\tilde{\rho}_{B,x} - \tilde{\rho}_{A,x}$ | Difference of reduced frequency ratios, using an external reference x                 |
+| $\hat{\nu}^0_B/\hat{\nu}^0_A$ | $\hat{\nu}^0_B$ | local RF  | $\tilde{\rho}_{B,x} - \tilde{\rho} _{A,x}$ | Difference of reduced frequency ratios, using an external reference x                 |
 | $1/1$                         | $\hat{\nu}^0_B$ | A         | $\tilde{\rho}_{B,A}$                      | Relative systematic correction ($B$ = corrected clock, $A$ = uncorrected clock)       |
 
 > **_NOTE:_** The reference oscillator must be accurate, in the sense that the discrepancy between its actual frequency and its nominal frequency must be $\lessapprox 10^{-13}$
