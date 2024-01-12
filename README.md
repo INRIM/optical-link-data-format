@@ -1,7 +1,9 @@
 # Optical link data format
 This repository contains the data exchange format for optical fiber link clock comparisons.
 
-This data format was developed for the European Metrology Programme for Innovation and Research (EMPIR) Projects [OFTEN](https://www.euramet.org/research-innovation/search-research-projects/details/?tx_eurametctcp_project[project]=1409) and [ROCIT](http://empir.npl.co.uk/rocit/) and for the European Partnership on Metrology Project [TOCK](https://www.ptb.de/epm2022/tock/home). The format implements the universal formalism presented by Lodewyck et al. (2020) and handles both microwave clocks, optical clocks and designed oscillators (DOs) such as ultrastable cavities and signals disseminated by optical fiber links.
+This document as been prepared for the European Partnership on Metrology Project [TOCK](https://www.ptb.de/epm2022/tock/home).
+
+This data format was developed for the European Metrology Programme for Innovation and Research (EMPIR) Projects [OFTEN](https://www.euramet.org/research-innovation/search-research-projects/details/?tx_eurametctcp_project[project]=1409) and [ROCIT](http://empir.npl.co.uk/rocit/).  The format implements the universal formalism presented by Lodewyck et al. (2020) and handles both microwave clocks, optical clocks and designed oscillators (DOs) such as ultrastable cavities and signals disseminated by optical fiber links.
 
 Clock comparison is understood to mean measuring the ratio of the frequencies of two clocks. Time transfer and time comparison are beyond the scope of this format.
 
@@ -94,6 +96,9 @@ choosing appropriate NFRs, scaling factor, and reference oscillators.
 
 > **_NOTE:_** The reference oscillator must be accurate, in the sense that the discrepancy between its actual frequency and its nominal frequency must be $\lessapprox 10^{-13}$
 
+## Examples
+See the Example folder for fictitious data used to test the data format before the March 2023 campaign of the project ROCIT.
+
 ## Funding
 ![badge](./Acknowledgement%20badge.png)
 
@@ -101,3 +106,9 @@ choosing appropriate NFRs, scaling factor, and reference oscillators.
 [Lodewyck et al.,  "Universal formalism for data sharing and processing in clock comparison networks", Phys. Rev. Research  2, 043269 (2020).](https://link.aps.org/doi/10.1103/PhysRevResearch.2.043269)
 
 [https://github.com/INRIM/tintervals](https://github.com/INRIM/tintervals)
+
+[TOCK](https://www.ptb.de/epm2022/tock/home)
+
+[ROCIT](http://empir.npl.co.uk/rocit/)
+
+[OFTEN](https://www.euramet.org/research-innovation/search-research-projects/details/?tx_eurametctcp_project[project]=1409)

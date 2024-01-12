@@ -1,0 +1,6 @@
+- name: INRIM_HM-INRIM_RioMod
+  numrhoBA: '1'
+  denrhoBA: '194400000000000'
+  sB: 1.0
+  nu0A: '194400000000000'
+  nu0B: '1'
