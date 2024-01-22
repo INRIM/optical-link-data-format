@@ -89,7 +89,7 @@ choosing appropriate NFRs, scaling factor, and reference oscillators.
 | $1/1$                         | $\hat{\nu}^0_B$ | local RF  | $(\nu_B - \nu_A)/\hat{\nu}^0_B$           | Beatnote in relative units, with respect to  $\hat{\nu}^0_B=\hat{\nu}^0_A$            |
 | $m_B/m_A$                     | +1              | local RF  | $\hat \nu_B - \frac{m_B}{m_A}\hat \nu_A$  | Transfer beat with prefered sign convention (A = clock; B = DO)                       |
 | $m_B/m_A$                     | -1              | local RF  | $\frac{m_B}{m_A}\hat \nu_A - \hat \nu_B$  | Transfer beat with opposite sign (A = clock; B = DO)                                  |
-| $\hat{\nu}^0_B/\hat{\nu}^0_A$ | +1              | local RF  | $\hat \nu_B - \hat{\nu}^0_B$              | Frequency of B, referenced to A (e.g., A is a maser or optical clock)                 |
+| $\hat{\nu}^0_B/\hat{\nu}^0_A$ | +1              | A         | $\hat \nu_B - \hat{\nu}^0_B$              | Frequency of B, referenced to A (e.g., A is a maser or optical clock)                 |
 | $\hat{\nu}^0_B/\hat{\nu}^0_A$ | $\hat{\nu}^0_B$ | A         | $\tilde{\rho}_{B,A}$                      | Frequency of B, referenced to A (e.g., A is a maser or optical clock), relative units |
 | $\hat{\nu}^0_B/\hat{\nu}^0_A$ | $\hat{\nu}^0_B$ | local RF  | $\tilde{\rho}_{B,x} - \tilde{\rho} _{A,x}$ | Difference of reduced frequency ratios, using an external reference x                 |
 | $1/1$                         | $\hat{\nu}^0_B$ | A         | $\tilde{\rho}_{B,A}$                      | Relative systematic correction ($B$ = corrected clock, $A$ = uncorrected clock)       |
