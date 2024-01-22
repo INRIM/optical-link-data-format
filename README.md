@@ -22,7 +22,7 @@ The data exchange is based on the publication of a comparator output for each pa
 The comparator output $\Delta_{A\rightarrow B}$ resulting from the comparison of oscillators A and B is defined as a scaled
 measured transfer beat:
 
-$$\Delta_{A\rightarrow B} = \frac{\hat{f}^T_{A\rightarrow B}}{s_B}  = \frac{\hat{\nu}_B -\rho^0 _{B,A} }{s_B}$$
+$$\Delta_{A\rightarrow B} = \frac{\hat{f}^T_{A\rightarrow B}}{s_B}  = \frac{\hat{\nu}_B -\rho^0 _{B,A} \hat{\nu}_A}{s_B} $$
 
 where the nominal frequency ratio $\rho^0_{B,A}$ and the scaling factor $s_B$ are numerical constants, freely and independently chosen by the operator of each comparator. The frequency reference against which the transfer beat is measured is also freely chosen by the operator.
 
