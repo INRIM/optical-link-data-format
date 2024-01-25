@@ -101,6 +101,19 @@ choosing appropriate NFRs, scaling factor, and reference oscillators.
 
 > **_NOTE:_** The reference oscillator must be accurate, in the sense that the discrepancy between its actual frequency and its nominal frequency must be $\lessapprox 10^{-13}$
 
+## Computing remote frequency ratios
+
+The frequency ratios between remote oscillators can be calculated from the comparator outputs using the
+equations:
+$$\rho_{n,0} = \left({\prod}^n_{i=1} \rho^0_{i,i-1} \right) \left(1+\sum^n_{i=1} R_{i-1 \rightarrow i}\right),$$
+
+$$R_{i-1 \rightarrow i} \simeq \Delta_{i-1 \rightarrow i} \frac{s_i/\hat{\nu}^0_0}{{\prod}^i_{k=1} \rho^0_{k,k-1}} = - \Delta_{i \rightarrow i -1} \frac{s_{-1}/\hat{\nu}^0_0}{{\prod}_{k=1}^{i-1} \rho^0 _{k,k-1} }, $$
+
+where the $\rho^0_{i,i-1}$ are the nominal frequency ratios required to generate the comparator output $\Delta_{i-1 \rightarrow i}$. They are published together with the comparator output with arbitrary numerical precision (`numrhoBA` and `denrhoBA` in the yaml file).
+
+> **_NOTE:_** In the special case where nominal frequencies ratios are consistently defined from a set of agreed upon nominal frequencies ($\rho^0 _{B,A} = \hat{\nu}^0_B/\hat{\nu}^0_A$ and $s_B = \hat{\nu}^0_B$), remote reduced frequency ratios can be computed with a simple sum of comparator outputs.
+The example implementation of a clock network proposed in the Appendix F of Lodewyck et al. (2020) is written using this convention.
+
 ## Examples
 See the Example folder for fictitious data used to test the data format before the March 2023 campaign of the project ROCIT.
 
