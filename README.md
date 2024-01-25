@@ -31,6 +31,10 @@ where the nominal frequency ratio $\rho^0_{B,A}$ and the scaling factor $s_B$ ar
 
 > **_NOTE:_**  In general $\Delta_{A\rightarrow B} \neq - \Delta_{B\rightarrow A}$.
 
+> **_NOTE:_**  With $s_B = 1$, the comparator output is the same as the transfer beat, typically used in fiber links and optical combs.
+
+> **_NOTE:_**  With $s_B = \hat{\nu}^0_B$, the oscillator B nominal frequency, the comparator output is given in relative frequency units typical for microwave and optical clocks.
+
 ### Definition of the exchange format
 The data format is defined by the following set of requirements:
 
