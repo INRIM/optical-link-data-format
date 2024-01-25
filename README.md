@@ -107,7 +107,7 @@ The frequency ratios between remote oscillators can be calculated from the compa
 equations:
 $$\rho_{n,0} = \left({\prod}^n_{i=1} \rho^0_{i,i-1} \right) \left(1+\sum^n_{i=1} R_{i-1 \rightarrow i}\right),$$
 
-$$R_{i-1 \rightarrow i} \simeq \Delta_{i-1 \rightarrow i} \frac{s_i/\hat{\nu}^0_0}{{\prod}^i_{k=1} \rho^0_{k,k-1}} = - \Delta_{i \rightarrow i -1} \frac{s_{-1}/\hat{\nu}^0_0}{{\prod}_{k=1}^{i-1} \rho^0 _{k,k-1} }, $$
+$$R_{i-1 \rightarrow i} \simeq \Delta_{i-1 \rightarrow i} \frac{s_i/\hat{\nu}^0_0}{{\prod}^i_{k=1} \rho^0_{k,k-1}} = - \Delta_{i \rightarrow i -1} \frac{s_{i-1}/\hat{\nu}^0_0}{{\prod}_{k=1}^{i-1} \rho^0 _{k,k-1} }, $$
 
 where the $\rho^0_{i,i-1}$ are the nominal frequency ratios required to generate the comparator output $\Delta_{i-1 \rightarrow i}$. They are published together with the comparator output with arbitrary numerical precision (`numrhoBA` and `denrhoBA` in the yaml file).
 
