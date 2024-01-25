@@ -26,6 +26,11 @@ $$\Delta_{A\rightarrow B} = \frac{\hat{f}^T_{A\rightarrow B}}{s_B}  = \frac{\hat
 
 where the nominal frequency ratio $\rho^0_{B,A}$ and the scaling factor $s_B$ are numerical constants, freely and independently chosen by the operator of each comparator. The frequency reference against which the transfer beat is measured is also freely chosen by the operator.
 
+
+> **_NOTE:_**  The relation between the comparator output and the transfer beat is exposed in a different way than in Lodewyck et al. (2020). The aim of the presentation chosen here is to seamlessly publish in a unified way comparator outputs and transfer beats.
+
+> **_NOTE:_**  In general $\Delta_{A\rightarrow B} \neq - \Delta_{B\rightarrow A}$.
+
 ### Definition of the exchange format
 The data format is defined by the following set of requirements:
 
@@ -51,7 +56,7 @@ The data format is defined by the following set of requirements:
 
 	> **_NOTE:_**  The comparator output does not depend on the `nu0A` or `nu0B` values. They are only used for data processing.
 
-	> **_NOTE:_** `nu0A` or `nu0B` values should be given for accurate oscillators (discrepancy between its actual frequency and its nominal frequency must be $\lessapprox 10^{-13}$), suach as masers and optical clocks.
+	> **_NOTE:_** `nu0A` or `nu0B` values should be given for accurate oscillators (discrepancy between its actual frequency and its nominal frequency must be $\lessapprox 10^{-13}$), such as masers and optical clocks.
 
 	> **_NOTE:_**  For input data, it is reccomended to have A as the accurate oscillator for which to specify `nu0A`, `grsA` and `uA_sys`. `nu0B`, `grsB` and `uB_sys` are there for simmetry.
 
@@ -74,7 +79,7 @@ The data format is defined by the following set of requirements:
 	
 
 
-## Examples of comparator ouputs
+## Examples of comparator outputs
 
 With the examples listed in the table below, we show that the file format defined in section 1.1 can ac-
 commodate with many different physical representations of the data, including the transfer beats that are
@@ -91,7 +96,7 @@ choosing appropriate NFRs, scaling factor, and reference oscillators.
 | $m_B/m_A$                     | -1              | local RF  | $\frac{m_B}{m_A}\hat \nu_A - \hat \nu_B$  | Transfer beat with opposite sign (A = clock; B = DO)                                  |
 | $\hat{\nu}^0_B/\hat{\nu}^0_A$ | +1              | A         | $\hat \nu_B - \hat{\nu}^0_B$              | Frequency of B, referenced to A (e.g., A is a maser or optical clock)                 |
 | $\hat{\nu}^0_B/\hat{\nu}^0_A$ | $\hat{\nu}^0_B$ | A         | $\tilde{\rho}_{B,A}$                      | Frequency of B, referenced to A (e.g., A is a maser or optical clock), relative units |
-| $\hat{\nu}^0_B/\hat{\nu}^0_A$ | $\hat{\nu}^0_B$ | local RF  | $\tilde{\rho}_{B,x} - \tilde{\rho} _{A,x}$ | Difference of reduced frequency ratios, using an external reference x                 |
+| $\hat{\nu}^0_B/\hat{\nu}^0_A$ | $\hat{\nu}^0_B$ | local RF  | $\tilde{\rho}_{B,x} - \tilde{\rho} _{A,x}$| Difference of reduced frequency ratios, using an external reference x                 |
 | $1/1$                         | $\hat{\nu}^0_B$ | A         | $\tilde{\rho}_{B,A}$                      | Relative systematic correction ($B$ = corrected clock, $A$ = uncorrected clock)       |
 
 > **_NOTE:_** The reference oscillator must be accurate, in the sense that the discrepancy between its actual frequency and its nominal frequency must be $\lessapprox 10^{-13}$
