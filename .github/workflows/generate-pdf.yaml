@@ -11,4 +11,4 @@ jobs:
     steps:
       - uses: docker://pandoc/latex:2.9
         with:
-          args: "README.md  -o README.pdf" # gets appended to pandoc command
+          args: "--output=README.pdf README.md" # gets appended to pandoc command
