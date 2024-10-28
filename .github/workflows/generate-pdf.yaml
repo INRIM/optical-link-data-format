@@ -1,0 +1,17 @@
+name: Generate PDF
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-22.04
+    container: 
+      image: pandoc/latex:2.9
+
+    steps:
+      - uses: actions/checkout@v2
+ 
+      - run: pandoc README.md -o README.pdf
