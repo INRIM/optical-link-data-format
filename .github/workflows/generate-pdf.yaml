@@ -8,7 +8,10 @@ on:
 jobs:
   convert_via_pandoc:
     runs-on: ubuntu-22.04
+    container: 
+      image: pandoc/latex:2.9
+
     steps:
-      - uses: docker://pandoc/latex:2.9
-        with:
-          args: "--output=README.pdf /github/workspace/README.md" # gets appended to pandoc command
+      - uses: actions/checkout@v2
+ 
+      - run: pandoc README.md -o README.pdf
