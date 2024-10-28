@@ -1,0 +1,14 @@
+name: Generate PDF
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  convert_via_pandoc:
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: docker://pandoc/latex:2.9
+        with:
+          args: "README.md  -o README.pdf" # gets appended to pandoc command
