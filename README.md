@@ -38,11 +38,11 @@ where the nominal frequency ratio $\rho^0_{B,A}$ and the scaling factor $s_B$ ar
 ### Definition of the exchange format
 The data format is defined by the following set of requirements:
 
-1. A file, or a set of files, located in the data’s main directory report on the chosen constants and related information. This file is written in YAML, and has the extension .yml. A single file for all institutes may be used, or different files  for each institute, the latter being equivalent to the former after concatenating all the YAML files. The files contain entries specifying the constant used to produce the comparator output $\Delta_{A\rightarrow B}$, using the following format:
+1. A file, or a set of files, located in the data's main directory report on the chosen constants and related information. This file is written in YAML, and has the extension .yml. A single file for all institutes may be used, or different files  for each institute, the latter being equivalent to the former after concatenating all the YAML files. The files contain entries specifying the constant used to produce the comparator output $\Delta_{A\rightarrow B}$, using the following format:
 
 	| | | |
-	|---|---|---|
-	|`- name`| comparator name, in the form `INSTITUTEB_OSCB-INSTITUTEA_OSCA` | String |
+	|--|------|--|
+	|`name`| comparator name, in the form `INSTITUTEB_OSCB-INSTITUTEA_OSCA` | String |
 	|`numrhoBA`| numerator of the nominal frequency ratio $\rho^0_{B,A}$ | Arbitrary precision floating point |
 	|`denrhoBA`| denominator of the nominal frequency ratio $\rho^0_{B,A}$ | Arbitrary precision floating point |
 	|`sB` |  scaling factor | Double precision floating point |
@@ -91,8 +91,8 @@ currently shared, but also pure optical to optical frequency ratios. These repre
 choosing appropriate NFRs, scaling factor, and reference oscillators.
 
 
-| $\rho^0_{B,A}$                | $s_B$           | Reference | $\Delta_{A\rightarrow B}$                 | Physical interpretation of the comparator                                             |
-|-------------------------------|-----------------|-----------|-------------------------------------------|---------------------------------------------------------------------------------------|
+| $\rho^0_{B,A}$                | $s_B$           | Ref.      | $\Delta_{A\rightarrow B}$                 | Physical interpretation of the comparator                                             |
+|---|---|----|------|--------------|
 | $1/1$                         | +1              | local RF  | $\nu_B - \nu_A$                           | Beatnote                                                                              |
 | $1/1$                         | -1              | local RF  | $\nu_A - \nu_B$                           | Beatnote with opposite sign                                                           |
 | $1/1$                         | $\hat{\nu}^0_B$ | local RF  | $(\nu_B - \nu_A)/\hat{\nu}^0_B$           | Beatnote in relative units, with respect to  $\hat{\nu}^0_B=\hat{\nu}^0_A$            |
