@@ -119,7 +119,7 @@ where the $\rho^0_{i,i-1}$ are the nominal frequency ratios required to generate
 The example implementation of a clock network proposed in the Appendix F of Lodewyck et al. (2020) is written using this convention.
 
 ## Examples
-See the Example folder for fictitious data used to test the data format before the March 2023 campaign of the project ROCIT.
+See the Example folder for fictitious data used to test the data format before the March 2022 campaign of the project ROCIT.
 
 ## Funding
 ![badge](./Acknowledgement%20badge.png)
